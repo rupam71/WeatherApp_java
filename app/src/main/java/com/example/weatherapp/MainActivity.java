@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Weather getData = new Weather();
-                getData.execute("http://api.openweathermap.org/data/2.5/weather?q="+name.getText().toString()+"&units=metric&appid=c37f3551d980d0899f6e95a99a8a56c8");
+                getData.execute("http://api.openweathermap.org/data/2.5/weather?q="+name.getText().toString()+"&units=metric&appid={id}");
                 current.setVisibility(View.VISIBLE);
                 place.setVisibility(View.VISIBLE);
 
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 DailyWheather getDailyData = new DailyWheather();
-                getDailyData.execute("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&appid=c37f3551d980d0899f6e95a99a8a56c8");
+                getDailyData.execute("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&appid={id}");
 
                 System.out.println("weather 3 "+lat+"  "+lon);
                 weekly.setVisibility(View.VISIBLE);
